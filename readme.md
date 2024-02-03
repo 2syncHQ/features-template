@@ -1,11 +1,10 @@
 # Feature Requests Portal template
 
-This repo requires [this Notion Template](https://notion.so/templates/) to work properly.
+This repo requires [this Notion Template](http://go.tonoid.com/feature-requests-board-notion-template) to work properly.
 
 ## One-click deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F2syncHQ%2Ffeatures-template&env=NOTION_API_TOKEN,NOTION_PORTAL_DATABASE_ID,NOTION_SUBMIT_IDEA_PAGE_ID,NOTION_ROOT_PAGE_ID,FEATURE_PORTAL_URL_ROOT,FORM_FEATURE_URL_ROOT,TALLY_SUBMIT_IDEA_FORM_ID,TALLY_FEATURE_FORM_ID&envDescription=Environment%20variables%20are%20required%20to%20make%20this%20deployment%20work.&envLink=https%3A%2F%2Fgithub.com%2F2syncHQ%2Ffeatures-template&project-name=feature-requests-portal&repository-name=feature-requests-portal
-)
+[![Deploy with Vercel](https://vercel.com/button)](http://go.tonoid.com/feature-requests-board-deploy-vercel)
 
 ## Environment variables
 
