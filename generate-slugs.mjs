@@ -5,7 +5,7 @@ import got from 'got';
 import { writeFile } from 'fs';
 
 async function queryFeatures(start_cursor = null) {
-  const { body } = await got.post(`https://api.notion.com/v1/databases/${process.env.NOTION_PORTAL_DATABASE_ID}/query`, {
+  const { body } = await got.post(`https://api.notion.com/v1/databases/${process.env.NOTION_IDEAS_DATABASE_ID}/query`, {
     json: {
       ...(start_cursor ? { start_cursor } : {}),
       page_size: 100,

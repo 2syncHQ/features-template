@@ -3,7 +3,7 @@ import * as paths from '../paths.json';
 // TODO: change these to your own values
 // NOTE: rootNotionSpaceId is optional; set it to undefined if you don't want to
 // use it.
-export const rootNotionPageId = process.env.NOTION_ROOT_PAGE_ID
+export const rootNotionPageId = process.env.NOTION_BOARD_PAGE_ID
 export const rootNotionSpaceId = undefined
 
 // NOTE: having this enabled can be pretty expensive as it re-generates preview

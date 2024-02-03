@@ -123,7 +123,7 @@ export const NotionPage = ({
     g.block = block
   }
 
-  const socialDescription = 'Feature Requests Portal' // Edit this to change the description of the page
+  const socialDescription = 'Feature Requests Board' // Edit this to change the description of the page
   const socialImage = null;
 
   return (

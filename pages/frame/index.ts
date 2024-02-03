@@ -15,7 +15,7 @@ export default function handler(
 
   const cleanParam = (d) => encodeURIComponent(d).replace(/'/g, '\\\'');
 
-  let extraQs = (req.query.source) ? `&source=${cleanParam(req.query.source)}` : '&source=Portal';
+  let extraQs = (req.query.source) ? `&source=${cleanParam(req.query.source)}` : '&source=Board';
 
   // You can add logic here to customize the form based on the user's information
   const userId = null;
@@ -52,7 +52,7 @@ export default function handler(
   <iframe id="main" frameborder="0" allowfullscreen style="height:calc(100vh - 4px);width:calc(100vw - 4px);box-sizing: border-box;"></iframe>
   <script>
     window.addEventListener('message', (event) => {
-      if (event.origin !== '${process.env.FEATURE_PORTAL_URL_ROOT}') return;
+      if (event.origin !== '${process.env.FEATURE_BOARD_URL_ROOT}') return;
       try {
         const slug = (event.data || '').split('?')[0].split('#')[0].split('/').slice(-1)[0] || '';
         document.getElementById('main').setAttribute('src', '${tallyFormUrl}${extraQs}&slug=' + encodeURIComponent(slug));
@@ -60,7 +60,7 @@ export default function handler(
         //
       }
     });
-    window.parent.postMessage('requestSlug', '${process.env.FEATURE_PORTAL_URL_ROOT}');
+    window.parent.postMessage('requestSlug', '${process.env.FEATURE_BOARD_URL_ROOT}');
   </script>
   </body>
   </html>
