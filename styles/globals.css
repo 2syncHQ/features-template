@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.notion-page-icon-hero,
+.notion-collection-column-title-icon,
+.notion-collection-view-dropdown {
+  display: none !important;
+}
+
+
+.notion-page-link.notion-blue_background {
+  background-color: #2f80ed!important;
+  color: #fff!important;
+  box-shadow: 0 3px 0 #0a3979!important;
+  border: 1px solid #115bbf!important;
+  padding: 10px 20px !important;
+  height: auto !important;
+  line-height: inherit !important;
+  text-align: center;
+  border-radius: 6px;
+  width: auto !important;
+  transition: all .25s;
+}
+
+.notion-page-link.notion-blue_background:hover{
+  filter: brightness(110%);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 0 #0a3979!important;
+}
+
+.notion-page-link.notion-blue_background .notion-page-icon-inline.notion-page-icon-span {
+  display: none !important;
+}
+
+.notion-page-link.notion-blue_background .notion-page-title-text {
+  border: 0 !important;
+}
+
+.notion-collection-header-title {
+  display: none !important;
+}
+
+.notion-collection-group-title .notion-property-select-item {
+  font-size: 18px !important;
+  padding: 3px 8px !important;
+  margin-left: 10px !important;
+  line-height: inherit !important;
+  height: auto !important;
+  border-radius: 6px !important;
+}
+
+.notion-block-17baa040fd6b4d329b0211d3cd3e4c73 .notion-header {
+  display: none !important;
+}
+
+.notion-block-17baa040fd6b4d329b0211d3cd3e4c73 details:last-child {
+  display: none !important;
+}
+
+.notion-asset-wrapper iframe {
+  background-color: transparent !important;
+}
+
+.notion-block-2ebb2e5751e348c8a3fa3e06dac33fd9 {
+  display: none !important;
+}
+
+.notion-collection-view-tabs-row,
+.notion-property-formula {
+  display: none !important;
+}
+
+.notion-collection-group { 
+  padding-top: 16px !important;
+}
