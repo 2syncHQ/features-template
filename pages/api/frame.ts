@@ -1,15 +1,10 @@
-import { NextResponse } from 'next/server'
-
-// This route can also be hosted on your API, in this case 
-export default function handler(request) {
-  const { searchParams } = new URL(request.url);
-
-  const tallyFormId = searchParams.get('formId');
+export default function handler(req, res) {
+  const tallyFormId = req.query.formId;
   const tallyFormUrl = `https://tally.so/embed/${tallyFormId}?alignLeft=1&hideTitle=1`;
 
   const cleanParam = (d) => encodeURIComponent(d).replace(/'/g, '\\\'');
 
-  let extraQs = (searchParams.get('source')) ? `&source=${cleanParam(searchParams.get('source'))}` : '&source=Board';
+  let extraQs = (req.query.source) ? `&source=${cleanParam(req.query.source)}` : '&source=Board';
 
   // You can add logic here to customize the form based on the user's information
   // const userId = null;
@@ -28,19 +23,19 @@ export default function handler(request) {
   //   }
   // }
 
-  if (searchParams.get('feature')) {
-    extraQs += `&feature=${cleanParam(searchParams.get('feature'))}`;
+  if (req.query.feature) {
+    extraQs += `&feature=${cleanParam(req.query.feature)}`;
   }
 
-  if (searchParams.get('sourceUrl')) {
-    extraQs += `&sourceUrl=${cleanParam(searchParams.get('sourceUrl'))}`;
+  if (req.query.sourceUrl) {
+    extraQs += `&sourceUrl=${cleanParam(req.query.sourceUrl)}`;
   }
 
-  if (searchParams.get('sourceId')) {
-    extraQs += `&sourceId=${cleanParam(searchParams.get('sourceId'))}`;
+  if (req.query.sourceId) {
+    extraQs += `&sourceId=${cleanParam(req.query.sourceId)}`;
   }
 
-  return new NextResponse(
+  res.status(200).end(
     `<html>
     <body style="margin: 0;">
     <iframe id="main" frameborder="0" allowfullscreen style="height:calc(100vh - 4px);width:calc(100vw - 4px);box-sizing: border-box;"></iframe>
@@ -58,7 +53,6 @@ export default function handler(request) {
     </script>
     </body>
     </html>
-    `,
-      { status: 410, headers: { 'content-type': 'text/html' } }
+    `
   )
 }
