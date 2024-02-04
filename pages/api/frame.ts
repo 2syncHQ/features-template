@@ -35,10 +35,12 @@ export default function handler(req, res) {
     extraQs += `&sourceId=${cleanParam(req.query.sourceId)}`;
   }
 
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Content-Security-Policy', 'frame-ancestors *');
   res.status(200).end(
     `<html>
     <body style="margin: 0;">
-    <iframe id="main" frameborder="0" allowfullscreen style="height:calc(100vh - 4px);width:calc(100vw - 4px);box-sizing: border-box;"></iframe>
+    <iframe id="main" frameborder="0" allowfullscreen style="height:calc(100vh - 4px);width:calc(100vw - 4px);box-sizing: border-box;" src="${tallyFormUrl}${extraQs}"></iframe>
     <script>
       window.addEventListener('message', (event) => {
         if (event.origin !== '${process.env.FEATURE_BOARD_URL_ROOT}') return;
