@@ -34,17 +34,6 @@ This is the root URL of the feature board that you have deployed on Vercel. Exam
 
 This is optional (and default the `FEATURE_BOARD_URL_ROOT`).
 On the deployed site, we have an endpoint that detects the parent page of the form, to get the feature slug. This can either be hosted on the feature requests board, or on your own API (to be able to detect the cookie, and get logged in user details).
-You can also
-
-### TALLY_SUBMIT_IDEA_FORM_ID
-
-You can duplicate this [tally template](https://tally.so/templates/submit-an-idea/mBdxRw).
-Publish your form, and get the form id. This should look like `VBtxNw` (don't use this example ofc, it's located on the form link)
-
-### TALLY_FEATURE_FORM_ID
-
-You can duplicate this [tally template](https://tally.so/templates/feature-request-feedback/wkeNom).
-Publish your form, and get the form id. This should look like `VBtxNw` (don't use this example ofc, it's located on the form link)
 
 ## Credits
 
