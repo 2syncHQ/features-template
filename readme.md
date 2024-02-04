@@ -28,11 +28,13 @@ This is the page id of the page [Board](https://shots.tonoid.com/21c1qn36), this
 
 ### FEATURE_BOARD_URL_ROOT
 
-This is the root URL of the feature board that you have deployed on Vercel. Example: `https://my-domain.com`
+This is the root URL of the feature board that you have deployed on Vercel.
+Since you do not know that domain before the first deploy, just use this as placeholder: `https://feature-requests.vercel.app/`
+And then you'll be able to change it later.
 
 ### FORM_FEATURE_URL_ROOT
 
-This is optional (and default the `FEATURE_BOARD_URL_ROOT`).
+You can use the same value as FEATURE_BOARD_URL_ROOT
 On the deployed site, we have an endpoint that detects the parent page of the form, to get the feature slug. This can either be hosted on the feature requests board, or on your own API (to be able to detect the cookie, and get logged in user details).
 
 ## Credits

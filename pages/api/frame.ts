@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 // This route can also be hosted on your API, in this case 
-export function middleware(request) {
+export default function handler(request) {
   const { searchParams } = new URL(request.url);
 
   const tallyFormId = searchParams.get('formId');
